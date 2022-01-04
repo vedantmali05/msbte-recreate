@@ -1,0 +1,256 @@
+* {
+    font-family: "Poppins", "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    outline: none;
+    border: none;
+    z-index: 10;
+    /* border: 1px solid #07f; */
+}
+
+:root {
+    --primary: #328be0;
+    --tertiary: #b4d7fe;
+    --minor: #dee2e6;
+    --alert: #ea4335;
+    --text: #161616;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+html {
+    font-size: 63.5%;
+    scroll-behavior: smooth;
+    scroll-margin: 5rem;
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--white);
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.tag {
+    color: var(--text);
+    border: 1px solid var(--alert);
+    border-radius: 5px;
+    padding: 1px 2px;
+    margin: 0 2px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+
+/* ///////////////////////////////// HEADER /////////////////////////// */
+
+.header {
+    overflow: hidden;
+    padding: 1.5rem 1.5rem;
+    width: min(100%, 95rem);
+    margin: auto;
+    color: var(--text);
+}
+
+.site-name-box {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.site-name-box figure img {
+    max-height: 8rem;
+}
+
+.emblem {
+    margin-left: auto;
+}
+
+.site-name {
+    font-size: clamp(16px, 5vw, 18px);
+    max-width: 38ch;
+}
+
+.site-eng {
+    font-weight: 500;
+}
+
+.site-eng-full {
+    display: none;
+}
+
+.site-sub-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 1rem;
+    font-size: min(3.6vw, 1.3rem);
+}
+
+.standard a {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+.standard a:hover {
+    color: var(--primary);
+}
+
+
+/* MENU */
+
+menu-box {
+    position: relative;
+}
+
+.menu {
+    z-index: 100;
+    display: flex;
+    flex-basis: 100%;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 1.2rem 1rem;
+    overflow-x: auto;
+    border-top: 1px solid var(--minor);
+}
+
+.menu::-webkit-scrollbar {
+    height: 3px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+    background: var(--tertiary);
+    border-radius: 10px;
+}
+
+.menu li {
+    border: 1px solid var(--tertiary);
+    border-radius: 10px;
+    padding: 0.4rem 1.5rem;
+    cursor: pointer;
+    position: relative;
+    background: var(--white);
+}
+
+.menu li.active {
+    border-color: var(--minor);
+    background: var(--minor);
+}
+
+.menu li:hover {
+    box-shadow: 0 0 0 1px var(--tertiary);
+}
+
+.menu li:hover a,
+.menu li:hover button,
+.menu li:hover .sub-menu-arrow {
+    color: var(--primary);
+    fill: var(--primary);
+}
+
+.menu li a,
+.menu li button {
+    color: var(--text);
+    white-space: nowrap;
+    text-transform: capitalize;
+    background: transparent;
+    font-size: clamp(16px, 2vw, 18px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li i {
+    position: relative;
+    top: 1px;
+}
+
+.submenu,
+.dropdown {
+    flex-wrap: wrap;
+    width: min(70rem, 90%);
+    margin: auto;
+    border: none;
+    box-shadow: 4px 5px 40px #00000025;
+    border-radius: 1rem;
+    padding: 0 2rem;
+    height: auto;
+    max-height: 0px;
+    overflow-x: auto;
+    transition: padding 0.2s, max-height 0.5s, opacity 0.2s;
+    position: absolute;
+    background: var(--white);
+    opacity: 0;
+}
+
+.submenu.open {
+    opacity: 1;
+    max-height: 100rem;
+    padding: 3rem 2rem;
+}
+
+.menu li .sub-menu-arrow {
+    margin-left: 2px;
+    position: relative;
+    color: var(--text);
+}
+
+.menu li .sub-menu-arrow::after {
+    content: "";
+    background: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: 20%;
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+}
+
+
+/* LATEST NEWS */
+
+.news-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+
+/* *********** MEDIA QUERIES **************** */
+
+@media (min-width: 300px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (min-width: 769px) {
+    html {
+        font-size: 75%;
+    }
+    .site-eng-abbr {
+        display: none;
+    }
+    .site-eng-full {
+        display: block;
+    }
+}
