@@ -38,3 +38,44 @@ nextNews.onclick = () => {
             "translateX(" + counter * 100 + "%) translateY(-50%)";
     }
 };
+
+// TODO: Automatic scrolling of news
+
+let zoomInBtn = document.querySelector(".zoom-in"),
+    zoomResetBtn = document.querySelector(".zoom-reset"),
+    zoomOutBtn = document.querySelector(".zoom-out"),
+    zoomStatus = 100;
+
+zoomInBtn.onclick = () => {
+    if (zoomStatus <= 130) {
+        zoomStatus += 10;
+        document.body.style.zoom = zoomStatus + "%";
+    }
+};
+
+zoomOutBtn.onclick = () => {
+    if (zoomStatus >= 80) {
+        zoomStatus -= 10;
+        document.body.style.zoom = zoomStatus + "%";
+    }
+};
+
+zoomResetBtn.onclick = () => {
+    zoomStatus = 100;
+    document.body.style.zoom = zoomStatus + "%";
+};
+
+let themeBtn = document.querySelector(".theme-toggle"),
+    themeDarkBtn = document.querySelector(".theme-dark-btn"),
+    themeLightBtn = document.querySelector(".theme-light-btn");
+
+themeBtn.onclick = () => {
+    themeDarkBtn.classList.toggle("set");
+    themeLightBtn.classList.toggle("set");
+};
+
+let printBtn = document.querySelector(".print-btn");
+
+printBtn.onclick = () => {
+    window.print();
+}

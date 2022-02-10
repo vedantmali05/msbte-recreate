@@ -1,5 +1,12 @@
 <!-- DOWNLOAD APP, ADD ALTs, Director Interview on SAHYADRI TV, FAQ, RTI, SEARCH, Language Toggle, latest news. -->
 
+<!-- TODO:
+    * Add alts and titles to important tags
+    * Director Interview on SAHYADRI TV - YouTube
+    * Add FAQ
+    * Add RTI
+    * Add Download App
+-->
 <!DOCTYPE html>
 
 <html>
@@ -10,21 +17,26 @@
     <title>MSBTE REMASTERED</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
 
     <!-- FONTS -->
+    <!-- Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- ICONS -->
+    <!-- Bootstarp -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 
 </head>
+
+<!-- Body -->
 
 <body id="indexPage">
     <!-- HEADER -->
@@ -58,6 +70,7 @@
                 <img src="images/emblem.png" title="Indian National Emblem, Government Of India" alt="">
             </figure>
         </section>
+        <!-- Sub tags -->
         <section class="site-sub-head">
             <span class="autonomous">
                 Autonomous
@@ -69,9 +82,10 @@
         </section>
 
         <!-- USER ACCESSIBILITY: Searchbox + Menu -->
-        <nav class="access">
+        <nav class="navigate">
             <!-- MENU -->
             <section class="menu-box">
+                <!-- Main Menu -->
                 <ul class="menu">
                     <li class="menu-link active"><a href="#">Home</a></li>
                     <li class="menu-link about-btn submenu-btn"><button>About Us
@@ -179,20 +193,21 @@
                     <li class="menu-link"><a href="#">Equivalence (Other Board)</a></li>
                     <li class="menu-link"><a href="#">Authentication and Verification</a></li>
                 </ul>
-            </section>
-            <!-- Admission Menu -->
-            <ul class="menu submenu admission-menu">
-                <li class="menu-link"><a href="#"><i class="bi-x-lg"></i></a></li>
-                <li class="menu-link"><a href="#">Post SSC Diploma 2021-22</a></li>
-                <li class="menu-link"><a href="#">Post HSC Diploma 2021-22</a></li>
-                <li class="menu-link"><a href="#">Direct Second Year Diploma Admission 2020-21</a></li>
-            </ul>
+                <!-- Admission Menu -->
+                <ul class="menu submenu admission-menu">
+                    <li class="menu-link"><a href="#"><i class="bi-x-lg"></i></a></li>
+                    <li class="menu-link"><a href="#">Post SSC Diploma 2021-22</a></li>
+                    <li class="menu-link"><a href="#">Post HSC Diploma 2021-22</a></li>
+                    <li class="menu-link"><a href="#">Direct Second Year Diploma Admission 2020-21</a></li>
+                </ul>
             </section>
             <!-- LATEST NEWS SECTION -->
             <section class="news-wrapper">
+                <!-- Next Button -->
                 <div class="news-control prev-btn">
                     <i class="bi bi-caret-left-fill"></i>
                 </div>
+                <!-- news -->
                 <div class="news-list-box">
                     <ul class="news-list">
                         <li class="news">
@@ -207,20 +222,63 @@
                         </li>
                         <li class="news">
                             <a href="#">
-                            Special provision for filling Winter 2021 Examination form.      
+                            Special provision for filling Winter 2021 Examination form.
                         </a>
                         </li>
                     </ul>
                 </div>
+                <!-- prev btn -->
                 <div class="news-control next-btn">
                     <i class="bi bi-caret-right-fill"></i>
                 </div>
             </section>
-
-            <div include-html="try.html"></div>
-
         </nav>
 
+        <section id="header-options">
+            <!-- Search-Container -->
+            <div class="search-wrapper">
+                <input type="text" placeholder="Search..." class="search-input">
+                <i class="bi bi-search"></i>
+            </div>
+            <!-- More Option Button -->
+            <div class="more-options-btn">
+                <i class="bi bi-three-dots"></i>
+            </div>
+            <!-- More Options -->
+            <div class="more-options">
+                <!-- MSBTE App Link -->
+                <div class="msbte-app-link">
+                    <a href="#" title="Downoad MSBTE App">
+                        <i class="bi bi-app-indicator"></i>
+                    </a>
+                </div>
+                <!-- Zoom -->
+                <div class="zoom">
+                    <span class="zoom-in">
+                            <i class="bi bi-zoom-in"></i>
+                        </span>
+                    <span class="zoom-reset">
+                            reset
+                        </span>
+                    <span class="zoom-out">
+                            <i class="bi bi-zoom-out"></i>
+                        </span>
+                </div>
+                <!-- Toggle Theme -->
+                <div class="theme-toggle">
+                    <span class="theme-toggle-btn theme-dark-btn">
+                            <i class="bi bi-moon"></i>
+                        </span>
+                    <span class="theme-toggle-btn theme-light-btn set">
+                            <i class="bi bi-sun"></i>
+                        </span>
+                </div>
+                <!-- Print Button -->
+                <div class="print-btn">
+                    <i class="bi bi-printer"></i>
+                </div>
+            </div>
+        </section>
     </header>
 
     <script src="script.js" async defer></script>
