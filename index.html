@@ -1,24 +1,24 @@
 <!-- DOWNLOAD APP, ADD ALTs, Director Interview on SAHYADRI TV, FAQ, RTI, SEARCH, Language Toggle, latest news. -->
 
 <!-- TODO:
-    * Add alts and titles to important tags
-    * Director Interview on SAHYADRI TV - YouTube
-    * Add FAQ
-    * Add RTI
-    * Add Download App
+    * Dark Theme Toggle
 -->
+
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>MSBTE REMASTERED</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="global-style.css">
     <link rel="stylesheet" href="header.css">
-
+    <link rel="stylesheet" href="hero.css">
     <!-- FONTS -->
     <!-- Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,13 +34,35 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 
+
 </head>
 
 <!-- Body -->
 
-<body id="indexPage">
+<body id="indexPage" style="min-width: 300px;">
     <!-- HEADER -->
-    <header class="header" id="header">
+    <header class="header" id="header" style="border-bottom: 1px solid var(--minor);">
+        <!-- Important Contents -->
+        <section class="media-blogs">
+            <!-- FAQs -->
+            <div class="skip-to-content-box">
+                <a href="#main" class="skip-to-content">Skip to Content</a>
+            </div>
+            <!-- FAQs -->
+            <div class="faq-link-box">
+                <a href="" class="faq-link">FAQs</a>
+            </div>
+            <!-- RTI -->
+            <div class="rti-link-box">
+                <a href="" class="rti-link">RTI</a>
+            </div>
+            <!-- Directors Interview on YouTube/Sahyadri TV -->
+            <div class="rti-link-box">
+                <a href="" class="rti-link">
+                    <i class="bi bi-youtube"></i> Director Interview on SAHYADRI TV
+                </a>
+            </div>
+        </section>
         <!-- LOGO AND SITE NAME -->
         <section class="site-name-box">
             <!-- Logo -->
@@ -57,7 +79,7 @@
                 </div>
                 <!-- English Full Name -->
                 <div class="site-eng-full site-eng">
-                    Maharastra State Board Of Technical Educaion, Mumbai
+                    Maharastra State Board Of Technical Education, Mumbai
                 </div>
                 <!-- Marathi Full Name -->
                 <div class="site-marathi">
@@ -280,6 +302,51 @@
             </div>
         </section>
     </header>
+    <!-- Main Page -->
+    <main id="main">
+        <!-- Hero Page -->
+        <section class="hero">
+            <!-- Hero.Slider -->
+            <section class="hero-slider-wrapper">
+                <!-- Contents -->
+                <div class="slider-content-wrapper">
+                    <div class="slide slide1">
+                        <img src="images/slider-img-sample.jpg" alt="" class="slider-img">
+                        <div class="slider-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi hic repellat impedit. Quasi labore sunt modi soluta eum iure dolor impedit illo deserunt? Dolore, repellendus? Porro sequi vel ullam voluptate ex tempora, minima
+                            voluptatem explicabo architecto, maiores reiciendis non ab, reprehenderit labore dolore eum soluta ratione magni quo eligendi? Repellendus!</div>
+                    </div>
+                    <div class="slide slide2">
+                        <img src="images/slider-img-sample.jpg" alt="" class="slider-img">
+                        <div class="slider-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi hic repellat impedit. Quasi labore sunt modi soluta eum iure dolor impedit illo deserunt? Dolore, repellendus? Porro sequi vel ullam voluptate ex tempora, minima
+                            voluptatem explicabo architecto, maiores reiciendis non ab, reprehenderit labore dolore eum soluta ratione magni quo eligendi? Repellendus! </div>
+                    </div>
+                    <div class="slide slide3">
+                        <img src="images/slider-img-sample.jpg" alt="" class="slider-img">
+                        <div class="slider-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi hic repellat impedit. Quasi labore sunt modi soluta eum iure dolor impedit illo deserunt? Dolore, repellendus? Porro sequi vel ullam voluptate ex tempora, minima
+                            voluptatem explicabo architecto, maiores reiciendis non ab, reprehenderit labore dolore eum soluta ratione magni quo eligendi? Repellendus! </div>
+                    </div>
+                    <div class="slide slide4">
+                        <img src="images/slider-img-sample.jpg" alt="" class="slider-img">
+                        <div class="slider-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi hic repellat impedit. Quasi labore sunt modi soluta eum iure dolor impedit illo deserunt? Dolore, repellendus? Porro sequi vel ullam voluptate ex tempora, minima
+                            voluptatem explicabo architecto, maiores reiciendis non ab, reprehenderit labore dolore eum soluta ratione magni quo eligendi? Repellendus! </div>
+                    </div>
+                </div>
+                <!-- Slider Controls -->
+                <div class="slider-controls-wrapper">
+                    <div class="slider-control-adj slide-prev-btn">
+                        <i class="bi bi-arrow-left"></i>
+                    </div>
+                    <div class="paging">
+                        <span class="paging-item" id="paging-item-1">1</span><span class="paging-item" id="paging-item-2">2</span><span class="paging-item" id="paging-item-3">3</span><span class="paging-item" id="paging-item-4">4</span><span class="paging-item"
+                            id="paging-item-5">5</span>
+                    </div>
+                    <div class="slider-control-adj slide-next-btn">
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
 
     <script src="script.js" async defer></script>
 </body>
