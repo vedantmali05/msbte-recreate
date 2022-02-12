@@ -41,6 +41,14 @@ nextNews.onclick = () => {
 
 // TODO: Automatic scrolling of news
 
+let moreOptionsBtn = document.querySelector(".more-options-btn"),
+    moreOptions = document.querySelector(".more-options");
+
+moreOptionsBtn.onclick = () => {
+    moreOptionsBtn.classList.toggle("open");
+    moreOptions.classList.toggle("open");
+};
+
 let zoomInBtn = document.querySelector(".zoom-in"),
     zoomResetBtn = document.querySelector(".zoom-reset"),
     zoomOutBtn = document.querySelector(".zoom-out"),
@@ -78,4 +86,4 @@ let printBtn = document.querySelector(".print-btn");
 
 printBtn.onclick = () => {
     window.print();
-}
+};

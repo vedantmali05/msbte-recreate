@@ -1,0 +1,76 @@
+/* //////////////////// HERO //////////////// */
+
+main {
+    width: min(100%, 100rem);
+    margin: 1rem auto;
+}
+
+
+/* //////////////////////// Slider //////////////////////// */
+
+.hero-slider-wrapper {
+    padding: 2rem;
+}
+
+.slider-content-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+    gap: 3rem;
+}
+
+.slide .slider-img {
+    flex: 1;
+    min-width: 30rem;
+}
+
+.slide .slider-text {
+    flex: 1;
+    font-size: clamp(13px, 2vw, 16px);
+    min-width: 30ch;
+}
+
+.slider-controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem 1rem;
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin-left: auto;
+}
+
+.slider-controls-wrapper i {
+    color: var(--text);
+    cursor: pointer;
+}
+
+.slider-controls-wrapper .paging {
+    display: flex;
+    gap: 1rem;
+}
+
+.slider-controls-wrapper .paging .paging-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--alert);
+    border-radius: 50%;
+    width: calc(clamp(2rem, 3vw, 3rem) + 1.5rem);
+    height: calc(clamp(2rem, 3vw, 3rem) + 1.5rem);
+}
+
+.slider-controls-wrapper .paging .paging-item:active {
+    box-shadow: 0 0 0 3px var(--alert);
+}
