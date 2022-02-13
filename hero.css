@@ -15,28 +15,32 @@ main {
 .slider-content-wrapper {
     display: flex;
     width: 100%;
-    gap: 3rem;
+    gap: 0;
     overflow: hidden;
 }
 
-.slide {
+.slide-hero {
     width: 100%;
     min-width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 0;
     gap: 3rem;
+    padding: 1rem;
 }
 
-.slide .slider-img {
+.slide-hero .slider-img {
     flex: 1;
     min-width: 30rem;
 }
 
-.slide .slider-text {
+.slide-hero .slider-text {
     flex: 1;
-    font-size: clamp(13px, 2vw, 16px);
     min-width: 30ch;
+}
+
+.slide-hero .slider-text p {
+    font-size: clamp(16px, 2vw, 18px);
 }
 
 .slider-controls-wrapper {
@@ -51,8 +55,26 @@ main {
 }
 
 .slider-controls-wrapper i {
+    font-size: clamp(2.5rem, 3vw, 3rem);
     color: var(--text);
     cursor: pointer;
+    padding: 0 1rem;
+}
+
+.slider-controls-wrapper .slide-prev-btn {
+    border-right: 2px solid var(--primary);
+}
+
+.slider-controls-wrapper .slide-next-btn:active {
+    box-shadow: -10px 0 var(--primary);
+}
+
+.slider-controls-wrapper .slide-prev-btn:active {
+    box-shadow: 10px 0 var(--primary);
+}
+
+.slider-controls-wrapper .slide-next-btn {
+    border-left: 2px solid var(--primary);
 }
 
 .slider-controls-wrapper .paging {
@@ -69,6 +91,11 @@ main {
     border-radius: 50%;
     width: calc(clamp(2rem, 3vw, 3rem) + 1.5rem);
     height: calc(clamp(2rem, 3vw, 3rem) + 1.5rem);
+    user-select: none;
+}
+
+.slider-controls-wrapper .paging .paging-item:nth-child(1) {
+    box-shadow: 0 0 0 3px var(--alert);
 }
 
 .slider-controls-wrapper .paging .paging-item:active {
