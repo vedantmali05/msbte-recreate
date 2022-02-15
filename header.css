@@ -122,12 +122,13 @@ menu-box {
     padding: 0.4rem 1.5rem;
     cursor: pointer;
     position: relative;
-    background: var(--white);
 }
 
-.menu li.active {
-    border-color: var(--minor);
-    background: var(--minor);
+.menu li.active,
+.menu li.active a {
+    border-color: transparent;
+    background: var(--text);
+    color: var(--white);
 }
 
 .menu li:hover {

@@ -5,12 +5,12 @@ main {
     margin: 1rem auto;
 }
 
+main>* {
+    padding: 4rem 2rem;
+}
+
 
 /* //////////////////////// Slider //////////////////////// */
-
-.hero-slider-wrapper {
-    padding: 2rem;
-}
 
 .slider-content-wrapper {
     display: flex;
@@ -26,7 +26,6 @@ main {
     flex-wrap: wrap;
     padding-bottom: 0;
     gap: 3rem;
-    padding: 1rem;
 }
 
 .slide-hero .slider-img {
@@ -49,9 +48,10 @@ main {
     align-items: center;
     gap: 2rem;
     width: 100%;
-    padding: 2rem 1rem;
     font-size: clamp(2rem, 3vw, 3rem);
     margin-left: auto;
+    max-width: 100%;
+    padding: 2rem 0;
 }
 
 .slider-controls-wrapper i {
@@ -79,6 +79,8 @@ main {
 
 .slider-controls-wrapper .paging {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -101,3 +103,110 @@ main {
 .slider-controls-wrapper .paging .paging-item:active {
     box-shadow: 0 0 0 3px var(--alert);
 }
+
+
+/* ////////////////////// ONLINE ACTIVITIES ///////////////// */
+
+.online-act-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+.online-act-wrapper h1 {
+    text-align: center;
+    width: 100%;
+    min-width: 10ch;
+    font-weight: 600;
+}
+
+.online-act-wrapper p {
+    flex: 1;
+    min-width: 22ch;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.online-act-wrapper :is(button, a) {
+    padding: 1rem 2rem;
+    font-size: clamp(16px, 2vw, 18px);
+    background: var(--text);
+    color: var(--white);
+    border-radius: 5px;
+    margin: auto;
+}
+
+.online-act-wrapper :is(button) {
+    padding: 0;
+}
+
+.online-act-wrapper :is(button, a):hover {
+    background: var(--alert);
+}
+
+
+/* /////////////////////////// ADMIN PANEL ////////////////////////// */
+
+.admin-panel-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.admin-panel-wrapper>* {
+    flex: 1;
+    min-width: 20rem;
+    max-width: 30rem;
+}
+
+.admin-panel-wrapper * {
+    text-align: center;
+}
+
+.admin-panel-wrapper img {
+    width: 45%;
+}
+
+.admin-panel-wrapper h1 {
+    font-size: clamp(20px, 2vw, 22px);
+    font-weight: 600;
+}
+
+.admin-panel-wrapper figcaption {
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+.admin-panel-wrapper a {
+    text-decoration: underline;
+    color: var(--text);
+}
+
+.admin-panel-wrapper a:hover {
+    color: var(--alert);
+}
+
+
+/* /////////////////////////// MEDIA QUERIES ////////////////////////// */
+
+@media (min-width: 375px) {
+    .online-act-wrapper h1 {
+        width: 10ch;
+        text-align: left;
+    }
+    .online-act-wrapper p {
+        text-align: left;
+        min-width: 35ch;
+        max-width: 48ch;
+    }
+    .online-act-wrapper :is(button, a) {
+        margin: 0;
+    }
+}
+
+@media (min-width: 769px) {}
