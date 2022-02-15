@@ -42,7 +42,8 @@ main>* {
     font-size: clamp(16px, 2vw, 18px);
 }
 
-.slider-controls-wrapper {
+.slider-controls-wrapper,
+.gallery-slider-control {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +55,8 @@ main>* {
     padding: 2rem 0;
 }
 
-.slider-controls-wrapper i {
+.slider-controls-wrapper i,
+.gallery-slider-control i {
     font-size: clamp(2.5rem, 3vw, 3rem);
     color: var(--text);
     cursor: pointer;
@@ -145,7 +147,7 @@ main>* {
 }
 
 .online-act-wrapper :is(button, a):hover {
-    background: var(--alert);
+    background: var(--primary);
 }
 
 
@@ -182,13 +184,82 @@ main>* {
     font-size: clamp(16px, 2vw, 18px);
 }
 
-.admin-panel-wrapper a {
+.admin-panel-wrapper a,
+.director-letter-wrapper .letter-contents a {
     text-decoration: underline;
     color: var(--text);
+    font-weight: 600;
 }
 
-.admin-panel-wrapper a:hover {
+.admin-panel-wrapper a:hover,
+.director-letter-wrapper .letter-contents a:hover {
     color: var(--alert);
+}
+
+
+/* PHOTO GAllery */
+
+.late-intro-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.late-intro-wrapper>* {
+    flex: 1;
+    min-width: 30rem;
+}
+
+.late-intro-wrapper .director-letter-wrapper {
+    min-width: 10ch;
+}
+
+.gallery-slider-wrapper {
+    position: relative;
+}
+
+.gallery-slider-wrapper h1,
+.director-letter-wrapper h1 {
+    min-width: 10ch;
+    font-weight: 600;
+    font-size: clamp(23px, 2vw, 25px);
+    padding: 1rem;
+    text-align: center;
+}
+
+.gallery-slide-box {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery-slide-box img {
+    min-width: 100%;
+}
+
+.gallery-slider-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(calc(-50%) + 0.5rem);
+    width: 100%;
+}
+
+.gallery-slider-control i {
+    background: var(--white);
+    font-size: clamp(3rem, 3vw, 3.5rem);
+}
+
+.gallery-slider-control .gallery-slide-prev i {
+    border-radius: 0 5px 5px 0;
+}
+
+.gallery-slider-control .gallery-slide-next i {
+    border-radius: 5px 0 0 5px;
+}
+
+.director-letter-wrapper p {
+    font-size: clamp(16px, 2vw, 18px);
+    overflow-y: auto;
 }
 
 
@@ -206,6 +277,9 @@ main>* {
     }
     .online-act-wrapper :is(button, a) {
         margin: 0;
+    }
+    .late-intro-wrapper .director-letter-wrapper {
+        min-width: 70ch;
     }
 }
 
