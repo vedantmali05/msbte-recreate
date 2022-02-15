@@ -166,8 +166,16 @@ for (let i = 0; i < heroPagingItem.length; i++) {
     });
 }
 
-// heroPagingItem.forEach(item => {
-//     item.style.boxShadow = "none";
-// })
-// heroPagingItem[Math.abs(localCounter)].style.boxShadow = "0 0 0 3px var(--alert)";
-// return localCounter;
+// ////////////////// PHOTO GALLERY SLIDER CONTROLLER
+let prevGallerySlide = document.querySelector(".gallery-slide-prev"),
+    nextGallerySlide = document.querySelector(".gallery-slide-next"),
+    slideGallery = document.querySelectorAll(".slide-gallery"),
+    slideGalleryCounter = 0;
+
+prevGallerySlide.addEventListener("click", function() {
+    slideGalleryCounter = prevCorousel(slideGallery, slideGalleryCounter, 0, null);
+})
+
+nextGallerySlide.addEventListener("click", function() {
+    slideGalleryCounter = nextCorousel(slideGallery, slideGalleryCounter, 0, null);
+})
