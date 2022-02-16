@@ -179,3 +179,18 @@ prevGallerySlide.addEventListener("click", function() {
 nextGallerySlide.addEventListener("click", function() {
     slideGalleryCounter = nextCorousel(slideGallery, slideGalleryCounter, 0, null);
 })
+
+// ////////////////// MORE LINKS VIEWER
+
+let moreLinks = document.querySelector(".more-links"),
+    moreLinksBtn = document.querySelector(".more-links-btn");
+
+
+moreLinksBtn.onclick = () => {
+    moreLinks.classList.toggle("show");
+    if (moreLinks.classList.contains("show")) {
+        moreLinksBtn.children[0].style.transform = "rotate(180deg)";
+    } else {
+        moreLinksBtn.children[0].style.transform = "rotate(0deg)";
+    }
+}

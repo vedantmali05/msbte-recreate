@@ -9,6 +9,14 @@ main>* {
     padding: 4rem 2rem;
 }
 
+.section-headings {
+    color: var(--text);
+    font-weight: 600;
+    font-size: 2.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
 
 /* //////////////////////// Slider //////////////////////// */
 
@@ -107,46 +115,48 @@ main>* {
 }
 
 
-/* ////////////////////// ONLINE ACTIVITIES ///////////////// */
+/* ////////////////////// ONLINE ACTIVITIES and MSBTE EVENTS Callout ///////////////// */
 
-.online-act-wrapper {
+.callouts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    gap: 4rem;
+}
+
+:is(.online-act-wrapper, .msbte-events-wrapper) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
-    width: 100%;
     font-size: clamp(16px, 2vw, 18px);
+    flex: 1;
+    min-width: 21ch;
+    border: 1px solid var(--text);
+    padding: 2rem 1rem;
+    border-radius: 1rem;
 }
 
-.online-act-wrapper h1 {
+:is(.online-act-wrapper, .msbte-events-wrapper)>* {
     text-align: center;
     width: 100%;
-    min-width: 10ch;
-    font-weight: 600;
+    margin: 1rem;
+    padding: 0;
 }
 
-.online-act-wrapper p {
-    flex: 1;
-    min-width: 22ch;
-    text-align: center;
-    margin-bottom: 1rem;
+:is(.online-act-wrapper, .msbte-events-wrapper) button {
+    width: auto;
+    margin-top: auto;
 }
 
-.online-act-wrapper :is(button, a) {
+:is(.online-act-wrapper, .msbte-events-wrapper) :is(a) {
     padding: 1rem 2rem;
     font-size: clamp(16px, 2vw, 18px);
     background: var(--text);
     color: var(--white);
     border-radius: 5px;
-    margin: auto;
 }
 
-.online-act-wrapper :is(button) {
-    padding: 0;
-}
-
-.online-act-wrapper :is(button, a):hover {
+:is(.online-act-wrapper, .msbte-events-wrapper) :is(button, a):hover {
     background: var(--primary);
 }
 
@@ -187,7 +197,7 @@ main>* {
 .admin-panel-wrapper a,
 .director-letter-wrapper .letter-contents a {
     text-decoration: underline;
-    color: var(--text);
+    color: var(--primary);
     font-weight: 600;
 }
 
@@ -197,7 +207,7 @@ main>* {
 }
 
 
-/* PHOTO GAllery */
+/* ////////////////////////// PHOTO GAllery ///////////////////// */
 
 .late-intro-wrapper {
     display: flex;
@@ -221,10 +231,6 @@ main>* {
 .gallery-slider-wrapper h1,
 .director-letter-wrapper h1 {
     min-width: 10ch;
-    font-weight: 600;
-    font-size: clamp(23px, 2vw, 25px);
-    padding: 1rem;
-    text-align: center;
 }
 
 .gallery-slide-box {
@@ -263,21 +269,74 @@ main>* {
 }
 
 
+/* //////////////////////////////// IMPORTANT LINKS /////////////////////////////// */
+
+.imp-link-list {
+    padding-left: 4rem;
+}
+
+.imp-link-list * {
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+.imp-link-list .imp-link-box {
+    list-style: url(images/link-45deg.svg);
+    font-size: clamp(18px, 2vw, 20px);
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.imp-link-list .imp-link-box.social-media {
+    list-style: url(images/box-arrow-up-right.svg);
+}
+
+.imp-link-list .imp-link-box a {
+    color: var(--text);
+}
+
+.imp-link-list .imp-link-box a:hover {
+    color: var(--alert);
+    text-decoration: underline;
+}
+
+.imp-link-list .imp-link-list>* {
+    width: 50%;
+}
+
+.imp-links-wrapper .more-links-btn {
+    background: var(--white);
+    color: var(--text);
+    border: 1px solid var(--text);
+    border-radius: 7px;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.imp-links-wrapper .more-links-btn:hover {
+    box-shadow: 0 0 0 1px var(--text);
+}
+
+.imp-links-wrapper .more-links-btn span {
+    margin: 0 2rem;
+    display: inline-block;
+}
+
+.imp-link-list.more-links {
+    max-height: 0rem;
+    overflow: hidden;
+    transition: max-height 2s;
+}
+
+.imp-link-list.more-links.show {
+    max-height: 1000rem;
+    transition: max-height 2s;
+}
+
+
 /* /////////////////////////// MEDIA QUERIES ////////////////////////// */
 
 @media (min-width: 375px) {
-    .online-act-wrapper h1 {
-        width: 10ch;
-        text-align: left;
-    }
-    .online-act-wrapper p {
-        text-align: left;
-        min-width: 35ch;
-        max-width: 48ch;
-    }
-    .online-act-wrapper :is(button, a) {
-        margin: 0;
-    }
     .late-intro-wrapper .director-letter-wrapper {
         min-width: 70ch;
     }
