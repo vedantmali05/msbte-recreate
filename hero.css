@@ -287,16 +287,11 @@ main>* {
 
 .imp-link-list .imp-link-box a {
     color: var(--text);
-    font-size: clamp(16px, 2vw, 18px);
 }
 
 .imp-link-list .imp-link-box a:hover {
     color: var(--alert);
     text-decoration: underline;
-}
-
-.imp-link-list>* {
-    width: 50%;
 }
 
 .imp-links-wrapper .more-links-btn {
