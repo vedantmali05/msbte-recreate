@@ -281,16 +281,13 @@ main>* {
     padding-left: 2rem;
 }
 
-.imp-link-list .imp-link-box * {
-    font-size: clamp(16px, 2vw, 18px);
-}
-
 .imp-link-list .imp-link-box.social-media {
     list-style: url(images/box-arrow-up-right.svg);
 }
 
 .imp-link-list .imp-link-box a {
     color: var(--text);
+    font-size: clamp(16px, 2vw, 18px);
 }
 
 .imp-link-list .imp-link-box a:hover {
@@ -298,7 +295,7 @@ main>* {
     text-decoration: underline;
 }
 
-.imp-link-list .imp-link-list>* {
+.imp-link-list>* {
     width: 50%;
 }
 
