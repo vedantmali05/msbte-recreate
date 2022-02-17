@@ -275,10 +275,6 @@ main>* {
     padding-left: 4rem;
 }
 
-.imp-link-list * {
-    font-size: clamp(16px, 2vw, 18px);
-}
-
 .imp-link-list .imp-link-box {
     list-style: url(images/link-45deg.svg);
     margin: 1rem 0;
@@ -291,6 +287,7 @@ main>* {
 
 .imp-link-list .imp-link-box a {
     color: var(--text);
+    font-size: clamp(16px, 2vw, 18px);
 }
 
 .imp-link-list .imp-link-box a:hover {
@@ -298,7 +295,7 @@ main>* {
     text-decoration: underline;
 }
 
-.imp-link-list .imp-link-list>* {
+.imp-link-list>* {
     width: 50%;
 }
 
