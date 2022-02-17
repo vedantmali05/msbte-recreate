@@ -275,14 +275,14 @@ main>* {
     padding-left: 4rem;
 }
 
-.imp-link-list * {
-    font-size: clamp(16px, 2vw, 18px);
-}
-
 .imp-link-list .imp-link-box {
     list-style: url(images/link-45deg.svg);
     margin: 1rem 0;
     padding-left: 2rem;
+}
+
+.imp-link-list .imp-link-box * {
+    font-size: clamp(16px, 2vw, 18px);
 }
 
 .imp-link-list .imp-link-box.social-media {
