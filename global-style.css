@@ -29,6 +29,7 @@ html {
     font-size: 63.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 3rem;
+    -webkit-text-size-adjust: none;
 }
 
 body {
