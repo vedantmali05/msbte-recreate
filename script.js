@@ -82,17 +82,17 @@ function prevCorousel(slideToChange, localCounter, adjuster, pagination) {
             "translateX(" + localCounter * 100 + "%) translateY(" + adjuster + "%)";
     }
     if (pagination != null) {
-        pagination.forEach(item => {
+        pagination.forEach((item) => {
             item.style.boxShadow = "none";
-        })
-        pagination[Math.abs(localCounter)].style.boxShadow = "0 0 0 3px var(--alert)";
+        });
+        pagination[Math.abs(localCounter)].style.boxShadow =
+            "0 0 0 3px var(--alert)";
     }
     return localCounter;
 }
 
 // Function to Get Previous Slide
 function nextCorousel(slideToChange, localCounter, adjuster, pagination) {
-
     localCounter--;
     for (let j = 0; j < slideToChange.length; j++) {
         if (Math.abs(localCounter) == slideToChange.length) {
@@ -102,10 +102,11 @@ function nextCorousel(slideToChange, localCounter, adjuster, pagination) {
             "translateX(" + localCounter * 100 + "%) translateY(" + adjuster + "%)";
     }
     if (pagination != null) {
-        pagination.forEach(item => {
+        pagination.forEach((item) => {
             item.style.boxShadow = "none";
-        })
-        pagination[Math.abs(localCounter)].style.boxShadow = "0 0 0 3px var(--alert)";
+        });
+        pagination[Math.abs(localCounter)].style.boxShadow =
+            "0 0 0 3px var(--alert)";
     }
     return localCounter;
 }
@@ -139,30 +140,43 @@ let heroPagingItem = document.querySelectorAll(".paging-item");
 
 // Hero Slider
 prevHeroSlideBtn.addEventListener("click", function() {
-    slideHero.forEach(item => {
+    slideHero.forEach((item) => {
         item.style.transition = ".5s";
     });
-    slideHeroCounter = prevCorousel(slideHero, slideHeroCounter, 0, heroPagingItem);
-
+    slideHeroCounter = prevCorousel(
+        slideHero,
+        slideHeroCounter,
+        0,
+        heroPagingItem
+    );
 });
 
 nextHeroSlideBtn.addEventListener("click", function() {
-    slideHero.forEach(item => {
+    slideHero.forEach((item) => {
         item.style.transition = ".5s";
     });
-    slideHeroCounter = nextCorousel(slideHero, slideHeroCounter, 0, heroPagingItem);
+    slideHeroCounter = nextCorousel(
+        slideHero,
+        slideHeroCounter,
+        0,
+        heroPagingItem
+    );
 });
 
 // //////////// Hero Page Slider Paging
 
-
 for (let i = 0; i < heroPagingItem.length; i++) {
     heroPagingItem[i].addEventListener("click", function() {
         slideHeroCounter = -(i - 1);
-        slideHero.forEach(item => {
+        slideHero.forEach((item) => {
             item.style.transition = "1.5s";
         });
-        slideHeroCounter = nextCorousel(slideHero, slideHeroCounter, 0, heroPagingItem);
+        slideHeroCounter = nextCorousel(
+            slideHero,
+            slideHeroCounter,
+            0,
+            heroPagingItem
+        );
     });
 }
 
@@ -173,18 +187,27 @@ let prevGallerySlide = document.querySelector(".gallery-slide-prev"),
     slideGalleryCounter = 0;
 
 prevGallerySlide.addEventListener("click", function() {
-    slideGalleryCounter = prevCorousel(slideGallery, slideGalleryCounter, 0, null);
-})
+    slideGalleryCounter = prevCorousel(
+        slideGallery,
+        slideGalleryCounter,
+        0,
+        null
+    );
+});
 
 nextGallerySlide.addEventListener("click", function() {
-    slideGalleryCounter = nextCorousel(slideGallery, slideGalleryCounter, 0, null);
-})
+    slideGalleryCounter = nextCorousel(
+        slideGallery,
+        slideGalleryCounter,
+        0,
+        null
+    );
+});
 
 // ////////////////// MORE LINKS VIEWER
 
 let moreLinks = document.querySelector(".more-links"),
     moreLinksBtn = document.querySelector(".more-links-btn");
-
 
 moreLinksBtn.onclick = () => {
     moreLinks.classList.toggle("show");
@@ -193,4 +216,25 @@ moreLinksBtn.onclick = () => {
     } else {
         moreLinksBtn.children[0].style.transform = "rotate(0deg)";
     }
+};
+
+// CIRCULAR SLIDER
+let circularTab = document.querySelectorAll(".circular-tab"),
+    circularTable = document.querySelectorAll(".circular-table"),
+    circularCounter = 0;
+
+circularTab.forEach((circularSlideBtn) => {
+    circularSlideBtn.addEventListener("click", function() {
+        circularTab.forEach((item) => {
+            item.classList.remove("show-circular");
+        });
+        circularSlideBtn.classList.add("show-circular");
+    });
+});
+
+for (let i = 0; i < circularTab.length; i++) {
+    circularTab[i].addEventListener("click", function() {
+        circularCounter = -(i - 1);
+        circularCounter = nextCorousel(circularTable, circularCounter, 0, null);
+    });
 }
