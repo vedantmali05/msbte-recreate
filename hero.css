@@ -379,7 +379,7 @@ main>* {
 }
 
 .circular-table :is(tr):nth-child(even) {
-    background: var(--tertiary);
+    background: #b4d7fe50;
 }
 
 .circular-table :is(a) {
