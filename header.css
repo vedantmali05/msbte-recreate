@@ -92,8 +92,18 @@
 
 /* ////////////////////// MENU ////////////////////// */
 
-menu-box {
-    position: relative;
+.navigate {
+    position: static;
+    z-index: 100;
+    background: var(--white);
+    width: min(100%, 100rem);
+}
+
+.navigate.sticky {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .menu {

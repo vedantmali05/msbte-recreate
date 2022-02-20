@@ -1,3 +1,14 @@
+// //////////////// NAVIGATOR STICKY ON SCROLL TO MENU SCROLLY
+let navigate = document.querySelector(".navigate");
+navigatePos = navigate.offsetTop + navigate.clientHeight;
+window.onscroll = () => {
+    if (window.scrollY > navigatePos) {
+        navigate.classList.add("sticky");
+    } else {
+        navigate.classList.remove("sticky");
+    }
+}
+
 // ///////////// MENU AND SUBMENU Script
 let submenuBtn = document.querySelectorAll(".submenu-btn"),
     submenu = document.querySelectorAll(".submenu");
