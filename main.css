@@ -48,6 +48,7 @@ main>* {
 
 .slide-hero .slider-text p {
     font-size: clamp(16px, 2vw, 18px);
+    text-indent: 5rem;
 }
 
 .slider-controls-wrapper,
@@ -262,6 +263,7 @@ main>* {
 .director-letter-wrapper p {
     font-size: clamp(16px, 2vw, 18px);
     overflow-y: auto;
+    text-indent: 5rem;
 }
 
 

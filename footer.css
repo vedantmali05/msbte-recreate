@@ -1,0 +1,38 @@
+.footer {
+    margin: 5rem auto 0 auto;
+    font-size: 1.6rem;
+    border-top: 2px solid var(--alert);
+}
+
+.partner-logo-wrapper,
+.closure-wrapper {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: min(100%, 80rem);
+    margin: auto;
+}
+
+.closure-wrapper :is(li, a),
+.disclaimer p {
+    color: var(--text);
+    font-weight: 500;
+    text-align: center;
+}
+
+.closure-wrapper :is(li, a):hover {
+    text-decoration: underline;
+}
+
+.disclaimer p {
+    padding: 2rem;
+    background: var(--tertiary);
+}
+
+
+/* /////////////////////////// MEDIA QUERIES ////////////////////////// */
+
+@media (min-width: 769px) {}
